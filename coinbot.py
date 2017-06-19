@@ -56,7 +56,7 @@ class CoinBot(object):
         self._pubapi = GDAX.PublicClient(product_id='BTC-USD')
 
         # get tokens
-        self._tokens = apitoken.get_toke()
+        self._tokens = apitoken.get_toke(token_names=TOKENLS)
 
         # storage for slack instance
         self._slackapi = None
