@@ -100,7 +100,7 @@ class CoinBot(object):
         cmd = words.split()
 
         # check first word
-        if cmd[0] in self._commands:
+        if len(cmd) and cmd[0] in self._commands:
             response = self._commands[cmd[0]](cmd)
 
         else:
